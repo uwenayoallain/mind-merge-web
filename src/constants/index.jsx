@@ -4,9 +4,9 @@ export const navigation = [
   {
     title: "Company",
     links: [
-      { title: "About", href: "/about" },
-      { title: "Process", href: "/process" },
-      { title: "Blog", href: "/blog" },
+      { title: "Projects", href: "/projects" },
+      { title: "E-Lab Challenges", href: "/challenges" },
+      { title: "Team", href: "/team" },
       { title: "Contact us", href: "/contact" },
     ],
   },

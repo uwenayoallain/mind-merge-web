@@ -5,7 +5,7 @@ import { BsTwitterX, BsGithub, BsYoutube, BsLinkedin } from "react-icons/bs";
 export const SocialMediaProfiles = [
   {
     title: "Youtube",
-    href: "https://www.youtube.com/watch?v=eAswnbWptBM",
+    href: "https://youtube.com/@mindmergealu?si=Pq4BqQJAoXTKY19s",
     icon: BsYoutube,
   },
   { title: "GitHub", href: "https://github.com/uwenayoallain", icon: BsGithub },
