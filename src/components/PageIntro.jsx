@@ -3,7 +3,13 @@ import Container from "./Container";
 import FadeIn from "./FadeIn";
 import clsx from "clsx";
 
-const PageIntro = ({ eyebrow, title, children, centered = false, ...props }) => {
+const PageIntro = ({
+  eyebrow,
+  title,
+  children,
+  centered = false,
+  ...props
+}) => {
   return (
     <Container
       {...props}

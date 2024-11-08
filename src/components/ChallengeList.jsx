@@ -1,10 +1,18 @@
 "use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowUpRight, Play, ExternalLink } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { ArrowUpRight, Play, ExternalLink } from "lucide-react";
+import Image from "next/image";
 
-const ChallengeItem = ({ title, description, videoUrl, imageUrl, index, invert = false }) => {
+const ChallengeItem = ({
+  title,
+  description,
+  videoUrl,
+  imageUrl,
+  index,
+  invert = false,
+}) => {
   const isEven = index % 2 === 0;
 
   return (
@@ -14,10 +22,12 @@ const ChallengeItem = ({ title, description, videoUrl, imageUrl, index, invert =
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
       className={`group relative py-24 
-        ${invert ? 'border-b border-white/10' : 'border-b border-neutral-900/10'}`}
+        ${invert ? "border-b border-white/10" : "border-b border-neutral-900/10"}`}
     >
-      <div className={`grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center ${isEven ? '' : 'lg:grid-cols-[1fr,1fr]'}`}>
-        <div className={`${!isEven ? 'lg:order-2' : ''}`}>
+      <div
+        className={`grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center ${isEven ? "" : "lg:grid-cols-[1fr,1fr]"}`}
+      >
+        <div className={`${!isEven ? "lg:order-2" : ""}`}>
           {/* Media Container */}
           <div className="relative overflow-hidden">
             <motion.div
@@ -35,7 +45,9 @@ const ChallengeItem = ({ title, description, videoUrl, imageUrl, index, invert =
                 />
               ) : (
                 imageUrl && (
-                  <img
+                  <Image
+                    width={1700}
+                    height={900}
                     src={imageUrl}
                     alt={title}
                     className="h-full w-full object-cover"
@@ -46,32 +58,32 @@ const ChallengeItem = ({ title, description, videoUrl, imageUrl, index, invert =
           </div>
         </div>
 
-        <div className={`${!isEven ? 'lg:order-1' : ''}`}>
+        <div className={`${!isEven ? "lg:order-1" : ""}`}>
           {/* Content Container */}
-          <div className={`flex flex-col ${isEven ? 'lg:pl-12' : 'lg:pr-12'}`}>
+          <div className={`flex flex-col ${isEven ? "lg:pl-12" : "lg:pr-12"}`}>
             <div className="relative pl-8">
               <div
                 className={`absolute left-0 top-0 h-full w-px 
-                  ${invert ? 'bg-white' : 'bg-neutral-950'}`}
+                  ${invert ? "bg-white" : "bg-neutral-950"}`}
               />
 
               <span
                 className={`text-sm font-medium mb-2 block
-                  ${invert ? 'text-white/70' : 'text-neutral-950/70'}`}
+                  ${invert ? "text-white/70" : "text-neutral-950/70"}`}
               >
-                {(index + 1).toString().padStart(2, '0')}
+                {(index + 1).toString().padStart(2, "0")}
               </span>
 
               <h3
                 className={`mb-6 text-3xl font-light tracking-tight 
-                  ${invert ? 'text-white' : 'text-neutral-950'}`}
+                  ${invert ? "text-white" : "text-neutral-950"}`}
               >
                 {title}
               </h3>
 
               <p
                 className={`mb-8 text-lg leading-relaxed 
-                  ${invert ? 'text-neutral-300' : 'text-neutral-600'}`}
+                  ${invert ? "text-neutral-300" : "text-neutral-600"}`}
               >
                 {description}
               </p>
@@ -83,7 +95,7 @@ const ChallengeItem = ({ title, description, videoUrl, imageUrl, index, invert =
                   rel="noopener noreferrer"
                   whileHover={{ x: 4 }}
                   className={`group/link mt-auto inline-flex items-center space-x-3 
-                    ${invert ? 'text-white' : 'text-neutral-950'}`}
+                    ${invert ? "text-white" : "text-neutral-950"}`}
                 >
                   <Play className="h-4 w-4" />
                   <span className="text-sm font-medium">Watch video</span>
@@ -95,10 +107,10 @@ const ChallengeItem = ({ title, description, videoUrl, imageUrl, index, invert =
                 <motion.button
                   whileHover={{ x: 4 }}
                   className={`group/link mt-auto inline-flex items-center space-x-3
-                    ${invert ? 'text-white' : 'text-neutral-950'}`}
+                    ${invert ? "text-white" : "text-neutral-950"}`}
                   onClick={() => {
-                    if (typeof window !== 'undefined') {
-                      window.open(imageUrl, '_blank');
+                    if (typeof window !== "undefined") {
+                      window.open(imageUrl, "_blank");
                     }
                   }}
                 >
@@ -120,7 +132,7 @@ const ChallengesList = ({ challenges, invert = false }) => {
   return (
     <section
       className={`mx-auto max-w-7xl px-6 lg:px-8 
-        ${invert ? 'bg-neutral-950 text-white' : 'bg-white text-neutral-950'}`}
+        ${invert ? "bg-neutral-950 text-white" : "bg-white text-neutral-950"}`}
     >
       <div>
         {challenges.map((challenge, index) => (
