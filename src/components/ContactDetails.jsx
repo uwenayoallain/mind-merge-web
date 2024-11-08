@@ -22,8 +22,10 @@ const ContactDetails = () => {
         </h2>
         <dl className="mt-6 grid grid-cols-1 gap-8 text-sm sm:grid-cols-2">
           {[
-            ["Careers", "reactjsbd.com"],
-            ["Press", "noorjsdivs@gmail.com"],
+            ["Careers", "careers@mind-merge.com"],
+            ["Press", "press@mind-merge.com"],
+            ["Support", "support@mind-merge.com"],
+            ["Sales", "sales@mind-merge.com"],
           ].map(([label, email]) => (
             <div key={email}>
               <dt className="font-semibold text-neutral-950">{label}</dt>

@@ -8,31 +8,24 @@ import React from "react";
 const AboutPage = () => {
   return (
     <>
-      <PageIntro eyebrow="About us" title="Our strength is collaboration">
+      <PageIntro eyebrow="About Mind-Merge" title="Empowering Connections, Inspiring Growth">
         <p>
-          We believe that our strength lies in our collaborative approach, which
-          puts our clients at the center of everything we do.
+          At Mind-Merge, we are dedicated to fostering meaningful connections and driving growth through innovative solutions and collaborative efforts.
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            Studio was started by three friends who noticed that developer
-            studios were charging clients double what an in-house team would
-            cost. Since the beginning, we have been committed to doing things
-            differently by charging triple instead.
+            Mind-Merge was founded with the vision of bridging gaps and creating opportunities for individuals and businesses alike. Our mission is to empower our clients by providing top-notch services that align with their goals and values.
           </p>
           <p>
-            At Studio, we’re more than just colleagues — we’re a family. This
-            means we pay very little and expect people to work late. We want our
-            employees to bring their whole selves to work. In return, we just
-            ask that they keep themselves there until at least 6:30pm.
+            We believe in the power of collaboration and strive to build lasting relationships with our clients. Our team is committed to delivering excellence in every project, ensuring that our clients achieve their desired outcomes.
           </p>
         </div>
       </PageIntro>
       <Container className="mt-16">
         <StatList>
-          <StatListItem value="35" label="Underpaid employees" />
-          <StatListItem value="52" label="Placated clients" />
-          <StatListItem value="$25M" label="Invoices billed" />
+          <StatListItem value="50+" label="Dedicated Team Members" />
+          <StatListItem value="100+" label="Satisfied Clients" />
+          <StatListItem value="10+" label="Years of Experience" />
         </StatList>
       </Container>
       <Cultures />
