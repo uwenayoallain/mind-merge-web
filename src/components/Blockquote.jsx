@@ -7,7 +7,7 @@ function BlockquoteWithImage({ author, image, children, className }) {
     <figure
       className={clsx(
         "grid grid-cols-[auto,1fr] items-center gap-x-4 gap-y-8 sm:grid-cols-12 sm:grid-rows-[1fr,auto,auto,1fr] sm:gap-x-10 lg:gap-x-16",
-        className
+        className,
       )}
     >
       <blockquote className="col-span-2 text-xl/7 text-neutral-600 sm:col-span-7 sm:col-start-6 sm:row-start-2">

@@ -10,7 +10,7 @@ const Testimonials = ({ children, client, className }) => {
     <div
       className={clsx(
         "relative isolate bg-neutral-50 py-16 sm:py-28 md:py-32",
-        className
+        className,
       )}
     >
       <GridPattern

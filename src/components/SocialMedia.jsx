@@ -1,12 +1,6 @@
 import Link from "next/link";
 import clsx from "clsx";
-import {
-  BsFacebook,
-  BsTwitter,
-  BsGithub,
-  BsYoutube,
-  BsLinkedin,
-} from "react-icons/bs";
+import { BsTwitterX, BsGithub, BsYoutube, BsLinkedin } from "react-icons/bs";
 
 export const SocialMediaProfiles = [
   {
@@ -14,21 +8,16 @@ export const SocialMediaProfiles = [
     href: "https://www.youtube.com/watch?v=eAswnbWptBM",
     icon: BsYoutube,
   },
-  { title: "GitHub", href: "https://github.com/chrhi", icon: BsGithub },
-  {
-    title: "Facebook",
-    href: "https://www.facebook.com/profile.php?id=100010070348939",
-    icon: BsFacebook,
-  },
+  { title: "GitHub", href: "https://github.com/uwenayoallain", icon: BsGithub },
   {
     title: "linkedin",
-    href: "https://www.linkedin.com/in/chehri-abdellah-4a8858267/",
+    href: "https://www.linkedin.com/in/uwenayoallain/",
     icon: BsLinkedin,
   },
   {
     title: "Twitter",
-    href: "https://twitter.com/KING_IN_JUNGLE",
-    icon: BsTwitter,
+    href: "https://twitter.com/uwenayoallain",
+    icon: BsTwitterX,
   },
 ];
 
@@ -39,7 +28,7 @@ const SocialMedia = ({ className, invert = false }) => {
       className={clsx(
         "flex gap-x-10",
         invert ? "text-white" : "text-neutral-950",
-        className
+        className,
       )}
     >
       {SocialMediaProfiles.map((item) => (
@@ -49,10 +38,10 @@ const SocialMedia = ({ className, invert = false }) => {
             aria-label={item.title}
             className={clsx(
               "transition",
-              invert ? "hover:text-neutral-200" : "hover:text-neutral-700"
+              invert ? "hover:text-neutral-200" : "hover:text-neutral-700",
             )}
           >
-            <item.icon className="h-6 w-6 fill-current" />
+            <item.icon className="h-6 w-6" />
           </Link>
         </li>
       ))}

@@ -27,7 +27,7 @@ const Header = ({
       <div className="flex items-center justify-between">
         {/* Logo */}
         <Link href={"/"} aria-label="Home">
-          <Logo invert={invert}>Abdullah Agency</Logo>
+          <Logo invert={invert}>Mind Merge</Logo>
         </Link>
         <div className="flex items-center gap-x-8">
           <Button href={"/contact"} invert={invert}>
@@ -41,7 +41,7 @@ const Header = ({
             aria-controls={panelId}
             className={clsx(
               "group -m-2.5 rounded-full p-2.5 transition",
-              invert ? "hover:bg-white/10" : "hover:bg-neutral-950/10"
+              invert ? "hover:bg-white/10" : "hover:bg-neutral-950/10",
             )}
             aria-label="Toggle navigation"
           >
@@ -50,7 +50,7 @@ const Header = ({
                 "h-6 w-6",
                 invert
                   ? "fill-white group-hover:fill-neutral-200"
-                  : "fill-neutral-950 group-hover:fill-neutral-700"
+                  : "fill-neutral-950 group-hover:fill-neutral-700",
               )}
             />
           </button>
@@ -120,8 +120,8 @@ const RootLayoutInner = ({ children }) => {
       <header>
         <div
           className="absolute left-0 right-0 top-2 z-40 pt-14"
-          aria-hidden={expanded ? "true" : undefined}
-          inert={expanded ? "" : undefined}
+          aria-hidden={expanded ? true : undefined}
+          inert={expanded ? false : undefined}
         >
           {/* Header */}
           <Header
@@ -132,7 +132,7 @@ const RootLayoutInner = ({ children }) => {
             onToggle={() => {
               setExpanded((expanded) => !expanded);
               window.setTimeout(() =>
-                closeRef.current?.focus({ preventScroll: true })
+                closeRef.current?.focus({ preventScroll: true }),
               );
             }}
           />
@@ -142,8 +142,8 @@ const RootLayoutInner = ({ children }) => {
           id={panelId}
           style={{ height: expanded ? "auto" : "0.5rem" }}
           className="relative z-50 overflow-hidden bg-neutral-950 pt-2"
-          aria-hidden={expanded ? undefined : "true"}
-          inert={expanded ? undefined : ""}
+          aria-hidden={expanded ? undefined : true}
+          inert={expanded ? undefined : false}
         >
           <motion.div layout className="bg-neutral-800">
             <div ref={navRef} className="bg-neutral-950 pb-16 pt-14">
@@ -156,7 +156,7 @@ const RootLayoutInner = ({ children }) => {
                 onToggle={() => {
                   setExpanded((expanded) => !expanded);
                   window.setTimeout(() =>
-                    openRef.current?.focus({ preventScroll: true })
+                    openRef.current?.focus({ preventScroll: true }),
                   );
                 }}
               />

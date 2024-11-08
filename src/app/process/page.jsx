@@ -11,7 +11,10 @@ const ProcessPage = () => {
     <>
       <PageIntro eyebrow="Our Process" title="Mind-Merge's Approach to Success">
         <p>
-          At Mind-Merge, we believe in a structured and collaborative approach to deliver exceptional results. Our process is designed to ensure that we understand your needs, develop innovative solutions, and deliver them efficiently.
+          At Mind-Merge, we believe in a structured and collaborative approach
+          to deliver exceptional results. Our process is designed to ensure that
+          we understand your needs, develop innovative solutions, and deliver
+          them efficiently.
         </p>
       </PageIntro>
       <div className="mt-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:mt-40 lg:space-y-40">

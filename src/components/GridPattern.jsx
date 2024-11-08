@@ -42,7 +42,7 @@ const GridPattern = ({ yOffset = 0, interactive = false, ...props }) => {
             transition={{ duration: 1, times: [0, 0, 1] }}
             onAnimationComplete={() => {
               setHoveredBlocks((blocks) =>
-                blocks.filter((b) => b[2] !== block[2])
+                blocks.filter((b) => b[2] !== block[2]),
               );
             }}
           />

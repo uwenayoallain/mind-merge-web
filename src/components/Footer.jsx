@@ -25,8 +25,7 @@ const NewsletterForm = () => {
         Sign up for our newsletter
       </h2>
       <p className="mt-4 text-sm text-neutral-700">
-        Subscribe to get the latest design news, articles, resources and
-        inspiration.
+        Subscribe to get the latest news and updates from Mind-Merge.
       </p>
       <div className="relative mt-6">
         <input
@@ -40,9 +39,9 @@ const NewsletterForm = () => {
           <button
             type="submit"
             aria-label="Submit"
-            className="flex aspect-square h-full items-center justify-center rounded-xl bg-neutral-950 text-white transition hover:bg-neutral-800"
+            className="group flex aspect-square h-full items-center justify-center rounded-xl bg-neutral-950 text-white transition hover:bg-neutral-800"
           >
-            <ArrowIcon className="w-4" />
+            <ArrowIcon className="w-4 group-hover:translate-x-1 transition-all" />
           </button>
         </div>
       </div>
@@ -62,12 +61,13 @@ const Footer = () => {
         </div>
         <div className="mb-20 mt-24 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
           <Link href={"/"} aria-label="Home">
-            <Logo className="h-8" fillOnHover>
+            <Logo className="h-8">
               Mind-Merge
             </Logo>
           </Link>
           <p className="text-sm text-neutral-700">
-            © Mind-Merge Inc. {new Date().getFullYear()} | Location: 1234 Elm Street, Suite 567, City, State, 12345 | Email: contact@mind-merge.com | Phone: (123) 456-7890
+            © Mind-Merge. {new Date().getFullYear()} | Email:
+            contact@mindmerge.tech | Phone: (+250) 791-986-368
           </p>
         </div>
       </FadeIn>

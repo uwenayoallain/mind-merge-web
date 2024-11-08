@@ -1,7 +1,7 @@
 export function constructMetadata({
-  title = "Abdullah Agency ",
-  description = "Abdullah Agency is an open-source website.",
-  image = "/agency.PNG",
+  title = "Mind Merge ",
+  description = "Mind Merge is a think tank dedicated to empowering young professionals in Rwanda by bridging skills gaps, promoting regional collaboration, and fostering opportunities for innovation and entrepreneurship.",
+  image = "/mindmerge.PNG",
   icons = "/favicon.ico",
   noIndex = false,
 }) {
@@ -22,10 +22,10 @@ export function constructMetadata({
       title,
       description,
       images: [image],
-      creator: "@KING_IN_JUNGLE",
+      creator: "@uwenayoallain",
     },
     icons,
-    metadataBase: new URL("https://agency-website-abdullah.vercel.app/"),
+    metadataBase: new URL("https://mindmerge.tech/"),
     themeColor: "#FFF",
     ...(noIndex && {
       robots: {

@@ -5,7 +5,9 @@ const Logo = ({ invert, href, className, children, ...props }) => {
   className = clsx(
     className,
     "black",
-    invert ? "text-white hover:text-blue-600" : "text-black hover:text-blue-600"
+    invert
+      ? "text-white hover:text-blue-600"
+      : "text-black hover:text-blue-600",
   );
   const inner = <span className="relative">{children}</span>;
   if (href) {
@@ -19,7 +21,7 @@ const Logo = ({ invert, href, className, children, ...props }) => {
     <h2
       className={clsx(
         "cursor-pointer text-2xl font-semibold duration-300",
-        className
+        className,
       )}
       {...props}
     >
